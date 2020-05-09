@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "yarn index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
