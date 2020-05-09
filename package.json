@@ -1,18 +1,21 @@
 {
   "name": "apirest",
   "version": "1.0.0",
-  "description": "",
+  "description": "Treinamento e estudos de API Rest com Express Framework Node.Js",
+  "engines": {
+    "node": "12.16.x"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "yarn index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BrunoMNoronha/nodejs-apirest.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api-rest", "nodejs", "javascript", "express", "mongodb"],
+  "author": "Bruno Menezes Noronha",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BrunoMNoronha/nodejs-apirest/issues"
