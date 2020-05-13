@@ -6,11 +6,12 @@ const AuthenticateController = require('./controllers/AuthenticateController');
 const ProductController = require('./controllers/ProductController');
 const UserController = require('./controllers/UserController');
 
+routes.post('/authenticate', AuthenticateController.index);
+
 routes.get('/products', ProductController.index);
 routes.get('/products/:id', ProductController.show);
 routes.get('/users', UserController.index);
 routes.get('/users/:id', UserController.show);
-routes.post('/authenticate', AuthenticateController.index);
 
 routes.use(authMiddleware);
 
