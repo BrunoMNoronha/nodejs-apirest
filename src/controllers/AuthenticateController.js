@@ -6,6 +6,10 @@ require('dotenv').config();
 
 const User = mongoose.model('User');
 
+function generateToken(params = {}) {
+    return jwt.sign(params, process.env.JWT_SECRET, {expiresIn: 86400});
+}
+
 module.exports = {
     async index(req, res) {
         const { email, password } = req.body;
@@ -21,8 +25,9 @@ module.exports = {
 
         user.password = undefined;
 
-        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: 86400});
-
-        return res.json({user, token});
+        return res.json({
+            user,
+            token: generateToken({id: user.id})
+        });
     }
 };
