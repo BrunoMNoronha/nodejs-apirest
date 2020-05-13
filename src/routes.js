@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
+const AuthenticateController = require('./controllers/AuthenticateController');
 const ProductController = require('./controllers/ProductController');
 const UserController = require('./controllers/UserController');
 
@@ -16,5 +17,6 @@ routes.post('/users', UserController.store);
 routes.put('/users/:id', UserController.update);
 routes.delete('/users/:id', UserController.destroy);
 
+routes.post('/authenticate', AuthenticateController.index);
 
 module.exports = routes;
